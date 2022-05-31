@@ -137,8 +137,108 @@
 
 //まとめる
 
-const arr2 = [1, 2, 3, 4, 5];
-const [num1, num2, ...arr3] = arr2;
-console.log(num1);
-console.log(num2);
-console.log(arr3);
+// const arr2 = [1, 2, 3, 4, 5];
+// const [num1, num2, ...arr3] = arr2;
+// console.log(num1);
+// console.log(num2);
+// console.log(arr3);
+
+/**
+ *  配列のコピー、結合
+ *
+ */
+// const arr4 = [10, 20];
+// const arr5 = [30, 40];
+
+// //arr4をarr6にコピーしてみる
+// const arr6 = [...arr4];
+// console.log(arr6);
+
+//arr4とarr5を結合してarr7に出力する
+// const arr7 = [...arr4, ...arr5];
+// console.log(arr7);
+
+//arr8という変数にarr４と同じ内容にする
+// const arr8 = arr4;
+// console.log(arr8);
+
+// //１個目に100を代入する
+// arr8[0] = 100;
+// console.log(arr8);
+
+/**
+ *  mapやfilterを使った配列の処理
+ *
+ */
+
+//従来の書き方 for
+
+// const nameArr = ["中桐", "山田", "田中"];
+// for (let index = 0; index < nameArr.length; index++) {
+// console.log(nameArr[index]);
+// }
+
+//mapの基本的な構文
+
+// const nameArr = ["中桐", "山田", "田中"];
+// const nameArr2 = nameArr.map((name) => {
+// return name;
+// })
+// console.log(nameArr2);
+
+// 結果　 ["中桐", "山田", "田中"]
+
+// //一列の時は省略しても良い
+
+// const nameArr = ["中桐", "山田", "田中"];
+// nameArr.map((name) => console.log(name));
+
+// //◯番目は◯◯です。と出力させたい時
+// //mapの場合、一つ目の引数に実際の配列が追加されているので、
+// //indexの要素を二つ目の引数に追加、順番が０から入ってくる。
+
+// const nameArr = ["中桐", "山田", "田中"];
+// nameArr.map((name, index) => console.log(`${index + 1}番目は${name}です。 `);
+
+// //if文で条件を書く。中桐のときだけさんをつけない。その他にさんをつける
+
+// const nameArr = ["中桐", "山田", "田中"];
+
+// const newNameArr = nameArr.map((name) => {
+// if (name === "中桐"){
+// return name
+// } else {
+// return `${name}さん`;
+// }
+// })
+// console.log(newNameArr);
+
+//filter
+
+//条件：数字が奇数のときだけ出力
+
+// const numArr = [1, 2, 3, 4, 5];
+// const newNumArr = numArr.filter((num) => {
+// return num % 2 === 1;
+// })
+// console.log(newNumArr);
+
+/**
+ *  三項演算子
+ *
+ */
+
+//  const val1 = 1 < 0 ? 'trueです' : 'falseです';
+//  console.log(val1);
+
+//カンマ区切りにする時は、toLocaleString()を使う　※文字列は使えない！
+// const num = "1300";
+
+// //typeof・・・判定
+// const formattedNum = typeof num === 'number' ? num.toLocaleString() : '数値を入力して下さい';
+// console.log(formattedNum);
+
+// const checkSum = (num1, num2) => {
+//   return num1 + num2 > 100 ? "100を超えてます" : "許容範囲です";
+// };
+// console.log(checkSum(50, 30));
