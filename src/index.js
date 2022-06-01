@@ -242,3 +242,42 @@
 //   return num1 + num2 > 100 ? "100を超えてます" : "許容範囲です";
 // };
 // console.log(checkSum(50, 30));
+
+/**
+ *  論理演算子
+ *
+ */
+
+// const flag1 = true;
+// const flag2 = true;
+
+// if (flag1 && flag2) {
+//   console.log("1も２もtrueになります");
+// }
+
+// if (flag1 && flag2) {
+//   console.log("1も２もtrueになります");
+// }
+// || または && かつで使っているけど本当はかつとかまたはではない
+
+//|| は左側がfalseなら右側を返す
+//num がnullのときはnull=falseなので、||の右側を返した。
+// const num = 300;
+// const fee = num || "金額未設定です";
+// console.log(fee);
+
+//num に数字が入っているときは数字=trueなので、numを返した。
+// const num = 300;
+// const fee = num || "金額未設定です";
+// console.log(fee);
+
+// && は左側はtrueなら右側を返す
+//num2に500(数字)＝trueが入っているので、右側を返しています。
+// const num2 = 500;
+// const fee2 = num2 && "なにか設定されています";
+// console.log(fee2);
+
+//num2にnull=falseだと
+const num2 = null;
+const fee2 = num2 && "何か設定されています";
+console.log(fee2);
